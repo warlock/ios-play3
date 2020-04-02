@@ -16,7 +16,24 @@ struct ContentView: View {
             //.scaledToFit()
             .aspectRatio(contentMode: .fill)
             .frame(width: 300)
-            .clipped()
+            //.clipped()
+            //.clipShape(Circle())
+            .clipShape(Capsule())
+            .opacity(0.5)
+            .overlay(
+                //Image(systemName: "heart.fill").font(.system(size:60))
+                Text("Quines ganes de tornar a la platja i sentir el aire fresc i relaxarme.")
+                    .fontWeight(.bold)
+                    .font(.system(.headline, design: .rounded))
+                    .foregroundColor(.white)
+                    .padding()
+                    .background(Color.gray)
+                    .cornerRadius(10)
+                    .opacity(0.7)
+                    .padding(),
+                alignment: .top
+            )
+        
     }
 }
 
